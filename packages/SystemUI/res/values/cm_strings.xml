@@ -128,6 +128,9 @@
     <string name="status_bar_location">Location</string>
     <string name="status_bar_microphone">Microphone</string>
 
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
+
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
 
