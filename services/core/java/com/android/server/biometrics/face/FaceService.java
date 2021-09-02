@@ -848,9 +848,9 @@ public class FaceService extends BiometricServiceBase {
     @GuardedBy("this")
     private IBiometricsFace mDaemon;
     private UsageStats mUsageStats;
-    protected boolean mRevokeChallengePending = false;
+    private boolean mRevokeChallengePending = false;
     // One of the AuthenticationClient constants
-    private int mCurrentUserLockoutMode;
+    protected int mCurrentUserLockoutMode;
 
     private CustomFaceService mCustomFaceService;
     private NotificationManager mNotificationManager;
@@ -968,10 +968,9 @@ public class FaceService extends BiometricServiceBase {
         @Override
         public void onLockoutChanged(long duration) {
             Slog.d(TAG, "onLockoutChanged: " + duration);
-
             if (duration == 0) {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_NONE;
-            } else if (duration == -1 || duration == Long.MAX_VALUE) {
+            } else if (duration == Long.MAX_VALUE) {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_PERMANENT;
             } else {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_TIMED;
