@@ -37,10 +37,11 @@ public class StatusBarIconList {
         for (int i=0; i < N; i++) {
             mSlots.add(new Slot(slots[i], null));
         }
-    }
 
         // Network traffic slot
         mSlots.add(0, new Slot(NetworkTrafficSB.SLOT, StatusBarIconHolder.fromNetworkTraffic()));
+
+    }
 
     public int getSlotIndex(String slot) {
         final int N = mSlots.size();
