@@ -86,10 +86,10 @@ public class NetworkTraffic extends TextView {
 
                 // Update view if there's anything new to show
                 if (output != getText()) {
-                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
+                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
                     setGravity(Gravity.CENTER);
                     setMaxLines(2);
-                    setLineSpacing(0.75f, 0.75f);
+                    setLineSpacing(0.90f, 0.90f);
                     setText(output);
                 }
             } else {
@@ -98,10 +98,10 @@ public class NetworkTraffic extends TextView {
 
                 // Update view if there's anything new to show
                 if (output != getText()) {
-                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
+                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
                     setGravity(Gravity.CENTER);
                     setMaxLines(2);
-                    setLineSpacing(0.75f, 0.75f);
+                    setLineSpacing(0.90f, 0.90f);
                     setText(output);
                 }
                 setVisibility(View.VISIBLE);
@@ -157,10 +157,10 @@ public class NetworkTraffic extends TextView {
                 formatSpeed = mDecimalFormat.format(speed / (float)KB);
             }
             spanSpeedString = new SpannableString(formatSpeed);
-            spanSpeedString.setSpan(new RelativeSizeSpan(0.75f), 0, (formatSpeed).length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            spanSpeedString.setSpan(new RelativeSizeSpan(0.90f), 0, (formatSpeed).length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
 
             spanUnitString = new SpannableString(mUnit + symbol);
-            spanUnitString.setSpan(new RelativeSizeSpan(0.70f), 0, (mUnit + symbol).length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            spanUnitString.setSpan(new RelativeSizeSpan(0.80f), 0, (mUnit + symbol).length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
             return TextUtils.concat(spanSpeedString, "\n", spanUnitString);
         }
 
@@ -324,9 +324,9 @@ public class NetworkTraffic extends TextView {
 
     public void onDensityOrFontScaleChanged() {
         final Resources resources = getResources();
-        setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
+        setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
         setGravity(Gravity.CENTER);
         setMaxLines(2);
-        setLineSpacing(0.75f, 0.75f);
+        setLineSpacing(0.90f, 0.90f);
     }
 }
