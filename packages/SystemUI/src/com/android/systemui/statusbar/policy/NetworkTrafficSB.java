@@ -11,7 +11,7 @@ import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.android.internal.util.fork.forkUtils;
+import com.android.internal.util.mtkosp.mtkospUtils;
 
 import com.android.systemui.Dependency;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -63,7 +63,7 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
     @Override
     protected void setMode() {
         super.setMode();
-        mIsEnabled = mIsEnabled && !forkUtils.hasNotch(mContext);
+        mIsEnabled = mIsEnabled && !mtkospUtils.hasNotch(mContext);
     }
 
     @Override
