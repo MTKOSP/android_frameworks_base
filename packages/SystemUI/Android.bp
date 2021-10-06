@@ -96,6 +96,8 @@ android_library {
         "jsr330",
         "lottie",
         "org.lineageos.platform.internal",
+        "colorkt",
+        "themelib",
     ],
     manifest: "AndroidManifest.xml",
 
